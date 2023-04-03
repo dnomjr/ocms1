@@ -1,6 +1,6 @@
 <?php namespace App\Arrival\Updates;
 
-use Illuminate\Support\Facades\Schema;
+use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
