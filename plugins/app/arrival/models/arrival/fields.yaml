@@ -7,7 +7,7 @@ fields:
         label: Actual time & date
         type: text
         readOnly: true
-        default: '{{ Plugin.getCurrentTime() }}'
+        default: '{{ Arrivals.getCurrentTime() }}'
 
     id:
         label: ID

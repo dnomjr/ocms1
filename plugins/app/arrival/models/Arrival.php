@@ -23,7 +23,8 @@ class Arrival extends Model
      * @var array Fillable fields
      */
     protected $fillable = [
-        'name'
+        'name',
+        'arrival'
     ];
 
     /**

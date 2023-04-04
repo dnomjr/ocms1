@@ -1,5 +1,6 @@
 <?php namespace App\Arrival\Controllers;
 
+use DateTime;
 use Backend\Facades\BackendMenu;
 use Backend\Classes\Controller;
 
@@ -31,5 +32,11 @@ class Arrivals extends Controller
         parent::__construct();
 
         BackendMenu::setContext('App.Arrival', 'arrival', 'arrivals');
+    }
+
+    public function getCurrentTime()
+    {
+        $date = new DateTime();
+        return $date->format('Y-m-d H:i:s');
     }
 }
