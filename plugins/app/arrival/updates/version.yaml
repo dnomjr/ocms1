@@ -1,5 +1,11 @@
 1.0.1: First version of Arrival
 1.0.2: 
 1.0.3: 
-- "Table create"
+- Table create
+- create_arrivals_table.php
+1.0.4:
+- Add new column "arrival
+- create_arrivals_table.php
+1.0.5:
+- Add new column "date
 - create_arrivals_table.php

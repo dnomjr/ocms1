@@ -11,3 +11,7 @@ columns:
         label: Student name
         searchable: true
 
+    arrival:
+        label: Date & time of arrival
+        type: datetime
+        

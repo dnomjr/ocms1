@@ -3,10 +3,15 @@
 # ===================================
 
 fields:
+    date:
+        label: Actual time & date
+        type: text
+        readOnly: true
+        default: '{{ Plugin.getCurrentTime() }}'
+
     id:
         label: ID
         disabled: true
-
+        
     name:
-         label: Student name
-         span: auto
+         label: Student name 

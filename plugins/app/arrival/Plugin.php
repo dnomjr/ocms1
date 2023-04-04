@@ -1,5 +1,6 @@
 <?php namespace App\Arrival;
 
+use DateTime;
 use Backend\Facades\Backend;
 use System\Classes\PluginBase;
 
@@ -87,5 +88,11 @@ class Plugin extends PluginBase
     public function boot()
     {
 
+    }
+
+    public function getCurrentTime()
+    {
+        $date = new DateTime();
+        return $date->format('Y-m-d H:i:s');
     }
 }
