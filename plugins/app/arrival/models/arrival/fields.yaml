@@ -3,11 +3,9 @@
 # ===================================
 
 fields:
-    date:
-        label: Actual time & date
-        type: text
-        readOnly: true
-        default: '{{ Arrivals.getCurrentTime() }}'
+    arrival:
+        label: Date & time of arrival
+        type: datepicker
 
     id:
         label: ID
