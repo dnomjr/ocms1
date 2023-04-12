@@ -1,20 +1,24 @@
-<? 
+<?php
 use App\Arrival\Models\Arrival;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event;
 
-Route::get('api', function () {
-    return Arrival::get();
-});
-
-Route::post('users', function (Request $request)
+Route::prefix('api/v1')->group(function()
 {
-    $user = new Arrival();
-    $user->name = $request->name;
-    $user->save();
+    Route::get('arrivals', function ()
+    {
+        return Arrival::all();
+    });
 
-    return response()->json('Succeed!');
-});
+    Route::post('arrivals', function (Request $request)
+    {
+        $arrival = new Arrival();
+        $arrival->name = $request->name;
+        $arrival->save();
 
+        Event::fire('app.event.eventHook');
 
-
+        return response()->json('Succeed!');
+    });
+});     
 ?>
