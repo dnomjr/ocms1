@@ -1,7 +1,6 @@
 <?php namespace App\Event;
 
 use Backend;
-use Illuminate\Support\Facades\Event;
 use System\Classes\PluginBase;
 
 /**
@@ -41,10 +40,13 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        Event::listen('app.event.eventHook', function()
+        \App\Arrival\Models\Arrival::extend(function ($arrival)
         {
-            return "Hello!";
-        });
+            $arrival->bindEvent('model.afterCreate', function() use ($arrival)
+                {
+                    \Log::info("{$arrival->name} was written to the list at {$arrival->arrival}");
+                });
+        }); 
     }
 
     /**

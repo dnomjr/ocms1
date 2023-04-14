@@ -13,10 +13,9 @@ Route::prefix('api/v1')->group(function()
     Route::post('arrivals', function (Request $request)
     {
         $arrival = new Arrival();
-        $arrival->name = $request->name;
+        $arrival->name = $request->post('name');
+        $arrival->arrival = now();
         $arrival->save();
-
-        Event::fire('app.event.eventHook');
 
         return response()->json('Succeed!');
     });
