@@ -12,3 +12,21 @@
 1.0.6:
 - Delete column "date
 - create_arrivals_table.php
+1.0.7:
+- Add column "user_id"
+- create_arrivals_table.php
+1.0.8:
+- Add column "user_id"
+- create_arrivals_table.php
+1.0.9:
+- Add column "user_id"
+- create_arrivals_table.php
+1.0.10:
+- Add column "user_id" with reference
+- create_arrivals_table.php
+1.0.11:
+- Add column "user_id" with reference
+- create_arrivals_table.php
+1.0.12:
+- Add column "user_id" with reference
+- create_arrivals_table.php

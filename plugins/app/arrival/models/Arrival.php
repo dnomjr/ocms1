@@ -22,7 +22,9 @@ class Arrival extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id'
+    ];
 
     /**
      * @var array Validation rules for attributes
